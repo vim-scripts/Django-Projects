@@ -1,0 +1,94 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2392
+
+Author: Gregor Müllegger <gregor@muellegger.de>
+Version: 0.1.0
+
+Description:
+  Use the script to run simple django specific tasks. You can run management
+  commands from in vim.
+
+Usage:
+  When you have specified all your django projects you can now tell the script
+  that you want now to work with one of them. Let's expect you want to work
+  with your 'fancyblog' project.
+  
+  At first you have to initalize this project:
+    :DjangoInit fancyblog
+
+  Now you can use all the cool commands to work with your project. Use
+  `:DjangoManage <command>` to execute a command with your manage.py file.
+
+    :DjangoManage syncdb
+
+  Use the `:DjangoTerminalManage <command>` command to execute a manage.py
+  command in an external terminal to free the vim command line for new
+  commands. This can be used to run django's development server from within
+  vim.
+
+Configuration:
+  There are a few global variables you can change to fit the script your
+  preferences:
+
+  g:django_terminal_program
+    Set this variable to a terminal programm which shall execute the commands
+    in :DjangoTerminalManage. Default is 'xterm -e'.
+
+Shortcuts:
+  There are already shortcuts for every builtin command to prevent you from
+  performing too many keystrokes:
+
+    :DjangoAdminindex
+    :DjangoCleanup
+    :DjangoCompileMessages
+    :DjangoCreateCachetable
+    :DjangoCreateSuperuser
+    :DjangoDBShell
+    :DjangoDiffsettings
+    :DjangoDumpdata
+    :DjangoFlush
+    :DjangoHelp command
+    :DjangoInspectDB
+    :DjangoLoaddata
+    :DjangoMakeMessages
+    :DjangoReset appname
+    :DjangoRunfcgi
+    :DjangoRunserver
+    :DjangoShell
+    :DjangoSql
+    :DjangoSqlall
+    :DjangoSqlclear
+    :DjangoSqlcustom
+    :DjangoSqlflush
+    :DjangoSqlindexes
+    :DjangoSqlinitialdata
+    :DjangoSqlreset
+    :DjangoSqlsequencereset
+    :DjangoStartapp newappname
+    :DjangoSyncdb
+    :DjangoTest [appnames]
+    :DjangoTestserver
+    :DjangoValidate
+
+  You can also use the commands from the django-commands-extension app if you
+  have installed it.
+
+    :DjangoCreateapp
+    :DjangoCreatecommand
+    :DjangoCreatejobs
+    :DjangoDescribeform
+    :DjangoDumpscript
+    :DjangoExportemails
+    :DjangoGenerateSecretKey
+    :DjangoGraphmodels
+    :DjangoPasswd
+    :DjangoPrintUserForSession
+    :DjangoResetDB
+    :DjangoRunjob
+    :DjangoRunjobs
+    :DjangoRunprofile
+    :DjangoRunscript
+    :DjangoRunserverPlus
+    :DjangoSetfakepasswords
+    :DjangoShellPlus
+    :DjangoShowurls
+    :DjangoSqldiff
